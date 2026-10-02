@@ -1,0 +1,6075 @@
+{
+ "quality": {
+  "rows": 920,
+  "missing_by_col": {
+   "age": 0,
+   "sex": 0,
+   "cp": 0,
+   "trestbps": 59,
+   "chol": 30,
+   "fbs": 90,
+   "restecg": 2,
+   "thalach": 55,
+   "exang": 55,
+   "oldpeak": 62,
+   "slope": 309,
+   "ca": 611,
+   "thal": 486,
+   "num": 0,
+   "site": 0
+  },
+  "duplicates": 2,
+  "chol_zero": 172,
+  "bp_zero": 1
+ },
+ "sql": {
+  "overview": [
+   {
+    "patients": 920,
+    "prevalence_pct": 55.3,
+    "avg_age": 53.5,
+    "avg_chol": 247.0
+   }
+  ],
+  "by_site": [
+   {
+    "site": "Switzerland",
+    "n": 123,
+    "prevalence_pct": 93.5
+   },
+   {
+    "site": "VA Long Beach (USA)",
+    "n": 200,
+    "prevalence_pct": 74.5
+   },
+   {
+    "site": "Cleveland (USA)",
+    "n": 303,
+    "prevalence_pct": 45.9
+   },
+   {
+    "site": "Hungary",
+    "n": 294,
+    "prevalence_pct": 36.1
+   }
+  ],
+  "by_sex": [
+   {
+    "sex_l": "Female",
+    "n": 194,
+    "prevalence_pct": 25.8
+   },
+   {
+    "sex_l": "Male",
+    "n": 726,
+    "prevalence_pct": 63.2
+   }
+  ],
+  "by_age": [
+   {
+    "age_group": "40-49",
+    "n": 212,
+    "prevalence_pct": 40.1
+   },
+   {
+    "age_group": "50-59",
+    "n": 375,
+    "prevalence_pct": 56.8
+   },
+   {
+    "age_group": "60-69",
+    "n": 222,
+    "prevalence_pct": 73.4
+   },
+   {
+    "age_group": "70+",
+    "n": 31,
+    "prevalence_pct": 71.0
+   },
+   {
+    "age_group": "<40",
+    "n": 80,
+    "prevalence_pct": 32.5
+   }
+  ],
+  "by_cp": [
+   {
+    "cp_l": "Asymptomatic",
+    "n": 496,
+    "prevalence_pct": 79.0
+   },
+   {
+    "cp_l": "Typical angina",
+    "n": 46,
+    "prevalence_pct": 43.5
+   },
+   {
+    "cp_l": "Non-anginal pain",
+    "n": 204,
+    "prevalence_pct": 35.8
+   },
+   {
+    "cp_l": "Atypical angina",
+    "n": 174,
+    "prevalence_pct": 13.8
+   }
+  ],
+  "by_exang": [
+   {
+    "exang_l": "No",
+    "n": 528,
+    "prevalence_pct": 36.4
+   },
+   {
+    "exang_l": "Yes",
+    "n": 337,
+    "prevalence_pct": 83.7
+   }
+  ],
+  "by_chol": [
+   {
+    "chol_cat": "Borderline (200-239)",
+    "n": 235,
+    "prevalence_pct": 44.7
+   },
+   {
+    "chol_cat": "Desirable (<200)",
+    "n": 132,
+    "prevalence_pct": 37.9
+   },
+   {
+    "chol_cat": "High (240+)",
+    "n": 351,
+    "prevalence_pct": 54.4
+   }
+  ],
+  "by_bp": [
+   {
+    "bp_cat": "Elevated (120-139)",
+    "n": 359,
+    "prevalence_pct": 52.4
+   },
+   {
+    "bp_cat": "High (140+)",
+    "n": 209,
+    "prevalence_pct": 67.0
+   },
+   {
+    "bp_cat": "Normal (<120)",
+    "n": 292,
+    "prevalence_pct": 48.3
+   }
+  ],
+  "by_hr": [
+   {
+    "hr_cat": "120-149",
+    "n": 345,
+    "prevalence_pct": 60.6
+   },
+   {
+    "hr_cat": "150+",
+    "n": 277,
+    "prevalence_pct": 28.9
+   },
+   {
+    "hr_cat": "<120",
+    "n": 243,
+    "prevalence_pct": 76.1
+   }
+  ],
+  "severity": [
+   {
+    "severity": 0,
+    "n": 411
+   },
+   {
+    "severity": 1,
+    "n": 265
+   },
+   {
+    "severity": 2,
+    "n": 109
+   },
+   {
+    "severity": 3,
+    "n": 107
+   },
+   {
+    "severity": 4,
+    "n": 28
+   }
+  ],
+  "sex_x_age": [
+   {
+    "age_group": "40-49",
+    "sex_l": "Female",
+    "n": 53,
+    "prevalence_pct": 11.3
+   },
+   {
+    "age_group": "40-49",
+    "sex_l": "Male",
+    "n": 159,
+    "prevalence_pct": 49.7
+   },
+   {
+    "age_group": "50-59",
+    "sex_l": "Female",
+    "n": 72,
+    "prevalence_pct": 27.8
+   },
+   {
+    "age_group": "50-59",
+    "sex_l": "Male",
+    "n": 303,
+    "prevalence_pct": 63.7
+   },
+   {
+    "age_group": "60-69",
+    "sex_l": "Female",
+    "n": 44,
+    "prevalence_pct": 45.5
+   },
+   {
+    "age_group": "60-69",
+    "sex_l": "Male",
+    "n": 178,
+    "prevalence_pct": 80.3
+   },
+   {
+    "age_group": "70+",
+    "sex_l": "Female",
+    "n": 6,
+    "prevalence_pct": 16.7
+   },
+   {
+    "age_group": "70+",
+    "sex_l": "Male",
+    "n": 25,
+    "prevalence_pct": 84.0
+   },
+   {
+    "age_group": "<40",
+    "sex_l": "Female",
+    "n": 19,
+    "prevalence_pct": 15.8
+   },
+   {
+    "age_group": "<40",
+    "sex_l": "Male",
+    "n": 61,
+    "prevalence_pct": 37.7
+   }
+  ]
+ },
+ "stats": {
+  "age": {
+   "mean_disease": 55.9,
+   "mean_healthy": 50.5,
+   "p": 1.288873276620284e-18
+  },
+  "trestbps": {
+   "mean_disease": 134.3,
+   "mean_healthy": 129.9,
+   "p": 0.0012996234951253604
+  },
+  "chol": {
+   "mean_disease": 254.0,
+   "mean_healthy": 240.2,
+   "p": 0.0006970251866489597
+  },
+  "thalach": {
+   "mean_disease": 128.3,
+   "mean_healthy": 148.8,
+   "p": 9.025959624080583e-32
+  },
+  "oldpeak": {
+   "mean_disease": 1.3,
+   "mean_healthy": 0.4,
+   "p": 8.512669088720237e-32
+  },
+  "sex": {
+   "chi2": 85.4,
+   "p": 2.48545278620117e-20
+  },
+  "cp": {
+   "chi2": 268.3,
+   "p": 7.03652487781721e-58
+  },
+  "exang": {
+   "chi2": 184.0,
+   "p": 6.422656534867857e-42
+  },
+  "fbs": {
+   "chi2": 16.1,
+   "p": 5.9716039956122106e-05
+  },
+  "sex_odds_ratio": 4.95
+ },
+ "model": {
+  "Logistic Regression": {
+   "cv_auc": 0.872,
+   "test_auc": 0.886,
+   "test_acc": 0.8,
+   "roc": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.008
+    ],
+    [
+     0.0,
+     0.362
+    ],
+    [
+     0.01,
+     0.362
+    ],
+    [
+     0.01,
+     0.402
+    ],
+    [
+     0.029,
+     0.402
+    ],
+    [
+     0.029,
+     0.417
+    ],
+    [
+     0.039,
+     0.417
+    ],
+    [
+     0.039,
+     0.433
+    ],
+    [
+     0.049,
+     0.433
+    ],
+    [
+     0.049,
+     0.465
+    ],
+    [
+     0.058,
+     0.465
+    ],
+    [
+     0.058,
+     0.504
+    ],
+    [
+     0.068,
+     0.504
+    ],
+    [
+     0.068,
+     0.622
+    ],
+    [
+     0.078,
+     0.622
+    ],
+    [
+     0.078,
+     0.646
+    ],
+    [
+     0.087,
+     0.646
+    ],
+    [
+     0.087,
+     0.685
+    ],
+    [
+     0.097,
+     0.685
+    ],
+    [
+     0.097,
+     0.701
+    ],
+    [
+     0.136,
+     0.701
+    ],
+    [
+     0.136,
+     0.709
+    ],
+    [
+     0.146,
+     0.709
+    ],
+    [
+     0.146,
+     0.74
+    ],
+    [
+     0.155,
+     0.74
+    ],
+    [
+     0.155,
+     0.748
+    ],
+    [
+     0.165,
+     0.748
+    ],
+    [
+     0.165,
+     0.756
+    ],
+    [
+     0.175,
+     0.756
+    ],
+    [
+     0.175,
+     0.764
+    ],
+    [
+     0.194,
+     0.764
+    ],
+    [
+     0.194,
+     0.787
+    ],
+    [
+     0.223,
+     0.787
+    ],
+    [
+     0.223,
+     0.827
+    ],
+    [
+     0.243,
+     0.827
+    ],
+    [
+     0.243,
+     0.835
+    ],
+    [
+     0.262,
+     0.835
+    ],
+    [
+     0.262,
+     0.858
+    ],
+    [
+     0.282,
+     0.858
+    ],
+    [
+     0.282,
+     0.874
+    ],
+    [
+     0.301,
+     0.874
+    ],
+    [
+     0.301,
+     0.882
+    ],
+    [
+     0.311,
+     0.882
+    ],
+    [
+     0.311,
+     0.89
+    ],
+    [
+     0.35,
+     0.89
+    ],
+    [
+     0.35,
+     0.898
+    ],
+    [
+     0.379,
+     0.898
+    ],
+    [
+     0.379,
+     0.906
+    ],
+    [
+     0.398,
+     0.906
+    ],
+    [
+     0.398,
+     0.929
+    ],
+    [
+     0.417,
+     0.929
+    ],
+    [
+     0.417,
+     0.945
+    ],
+    [
+     0.456,
+     0.945
+    ],
+    [
+     0.456,
+     0.953
+    ],
+    [
+     0.485,
+     0.953
+    ],
+    [
+     0.485,
+     0.961
+    ],
+    [
+     0.495,
+     0.961
+    ],
+    [
+     0.495,
+     0.976
+    ],
+    [
+     0.563,
+     0.976
+    ],
+    [
+     0.563,
+     0.984
+    ],
+    [
+     0.777,
+     0.984
+    ],
+    [
+     0.777,
+     0.992
+    ],
+    [
+     0.816,
+     0.992
+    ],
+    [
+     0.816,
+     1.0
+    ],
+    [
+     1.0,
+     1.0
+    ]
+   ],
+   "cm": [
+    [
+     78,
+     25
+    ],
+    [
+     21,
+     106
+    ]
+   ]
+  },
+  "Random Forest": {
+   "cv_auc": 0.873,
+   "test_auc": 0.902,
+   "test_acc": 0.804,
+   "roc": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.008
+    ],
+    [
+     0.0,
+     0.22
+    ],
+    [
+     0.01,
+     0.22
+    ],
+    [
+     0.01,
+     0.409
+    ],
+    [
+     0.019,
+     0.409
+    ],
+    [
+     0.019,
+     0.559
+    ],
+    [
+     0.049,
+     0.559
+    ],
+    [
+     0.049,
+     0.591
+    ],
+    [
+     0.068,
+     0.591
+    ],
+    [
+     0.068,
+     0.614
+    ],
+    [
+     0.078,
+     0.614
+    ],
+    [
+     0.078,
+     0.677
+    ],
+    [
+     0.097,
+     0.677
+    ],
+    [
+     0.097,
+     0.701
+    ],
+    [
+     0.117,
+     0.701
+    ],
+    [
+     0.117,
+     0.709
+    ],
+    [
+     0.136,
+     0.709
+    ],
+    [
+     0.136,
+     0.724
+    ],
+    [
+     0.155,
+     0.724
+    ],
+    [
+     0.155,
+     0.748
+    ],
+    [
+     0.165,
+     0.748
+    ],
+    [
+     0.165,
+     0.756
+    ],
+    [
+     0.175,
+     0.756
+    ],
+    [
+     0.175,
+     0.78
+    ],
+    [
+     0.214,
+     0.78
+    ],
+    [
+     0.214,
+     0.819
+    ],
+    [
+     0.223,
+     0.819
+    ],
+    [
+     0.223,
+     0.835
+    ],
+    [
+     0.252,
+     0.835
+    ],
+    [
+     0.252,
+     0.85
+    ],
+    [
+     0.262,
+     0.85
+    ],
+    [
+     0.262,
+     0.866
+    ],
+    [
+     0.272,
+     0.866
+    ],
+    [
+     0.272,
+     0.882
+    ],
+    [
+     0.291,
+     0.882
+    ],
+    [
+     0.291,
+     0.89
+    ],
+    [
+     0.301,
+     0.89
+    ],
+    [
+     0.301,
+     0.898
+    ],
+    [
+     0.32,
+     0.898
+    ],
+    [
+     0.32,
+     0.913
+    ],
+    [
+     0.33,
+     0.913
+    ],
+    [
+     0.33,
+     0.929
+    ],
+    [
+     0.35,
+     0.929
+    ],
+    [
+     0.35,
+     0.953
+    ],
+    [
+     0.408,
+     0.953
+    ],
+    [
+     0.408,
+     0.961
+    ],
+    [
+     0.427,
+     0.961
+    ],
+    [
+     0.427,
+     0.976
+    ],
+    [
+     0.505,
+     0.976
+    ],
+    [
+     0.505,
+     0.984
+    ],
+    [
+     0.534,
+     0.984
+    ],
+    [
+     0.534,
+     0.992
+    ],
+    [
+     0.709,
+     0.992
+    ],
+    [
+     0.709,
+     1.0
+    ],
+    [
+     1.0,
+     1.0
+    ]
+   ],
+   "cm": [
+    [
+     76,
+     27
+    ],
+    [
+     18,
+     109
+    ]
+   ]
+  },
+  "importance": [
+   {
+    "feature": "Chest pain type",
+    "value": 0.239
+   },
+   {
+    "feature": "Max heart rate",
+    "value": 0.134
+   },
+   {
+    "feature": "ST depression",
+    "value": 0.127
+   },
+   {
+    "feature": "Age",
+    "value": 0.12
+   },
+   {
+    "feature": "Exercise angina",
+    "value": 0.111
+   },
+   {
+    "feature": "Cholesterol",
+    "value": 0.107
+   },
+   {
+    "feature": "Resting BP",
+    "value": 0.068
+   },
+   {
+    "feature": "Sex",
+    "value": 0.059
+   },
+   {
+    "feature": "Rest ECG",
+    "value": 0.024
+   },
+   {
+    "feature": "Fasting sugar",
+    "value": 0.012
+   }
+  ]
+ },
+ "scatter": [
+  {
+   "age": 63.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 67.0,
+   "thalach": 108.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 67.0,
+   "thalach": 129.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 37.0,
+   "thalach": 187.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 56.0,
+   "thalach": 178.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 160.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 57.0,
+   "thalach": 163.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 63.0,
+   "thalach": 147.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 155.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 148.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 153.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 56.0,
+   "thalach": 142.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 173.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 162.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 174.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 168.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 139.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 171.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 144.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 162.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 58.0,
+   "thalach": 160.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 173.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 132.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 158.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 58.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 66.0,
+   "thalach": 114.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 171.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 114.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 69.0,
+   "thalach": 151.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 60.0,
+   "thalach": 160.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 158.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 161.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 179.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 178.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 112.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 132.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 137.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 114.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 40.0,
+   "thalach": 178.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 71.0,
+   "thalach": 162.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 59.0,
+   "thalach": 157.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 169.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 58.0,
+   "thalach": 165.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 123.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 128.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 157.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 53.0,
+   "thalach": 152.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 168.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 65.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 153.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 188.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 144.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 109.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 163.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 158.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 152.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 125.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 142.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 46.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 58.0,
+   "thalach": 131.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 113.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 142.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 155.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 165.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 147.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 148.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 67.0,
+   "thalach": 163.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 99.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 158.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 177.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 151.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 60.0,
+   "thalach": 141.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 142.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 180.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 111.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 148.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 143.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 39.0,
+   "thalach": 182.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 68.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 180.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 156.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 115.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 53.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 51.0,
+   "thalach": 149.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 66.0,
+   "thalach": 151.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 145.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 62.0,
+   "thalach": 146.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 175.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 63.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 52.0,
+   "thalach": 161.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 142.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 157.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 52.0,
+   "thalach": 158.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 186.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 185.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 34.0,
+   "thalach": 174.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 159.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 71.0,
+   "thalach": 130.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 139.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 156.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 162.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 146.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 56.0,
+   "thalach": 144.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 190.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 136.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 62.0,
+   "thalach": 97.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 41.0,
+   "thalach": 132.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 165.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 35.0,
+   "thalach": 182.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 63.0,
+   "thalach": 132.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 127.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 154.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 51.0,
+   "thalach": 143.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 111.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 174.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 175.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 56.0,
+   "thalach": 133.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 126.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 163.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 147.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 154.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 29.0,
+   "thalach": 202.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 186.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 165.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 55.0,
+   "thalach": 161.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 70.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 103.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 35.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 166.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 164.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 159.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 184.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 131.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 154.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 152.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 124.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 179.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 52.0,
+   "thalach": 178.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 122.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 67.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 55.0,
+   "thalach": 145.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 96.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 70.0,
+   "thalach": 109.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 173.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 171.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 170.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 68.0,
+   "thalach": 151.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 156.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 77.0,
+   "thalach": 162.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 158.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 58.0,
+   "thalach": 122.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 175.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 168.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 169.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 159.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 35.0,
+   "thalach": 156.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 138.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 70.0,
+   "thalach": 112.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 111.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 143.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 62.0,
+   "thalach": 157.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 64.0,
+   "thalach": 132.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 88.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 147.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 162.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 173.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 166.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 42.0,
+   "thalach": 178.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 145.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 161.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 63.0,
+   "thalach": 179.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 42.0,
+   "thalach": 194.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 195.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 69.0,
+   "thalach": 146.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 163.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 143.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 106.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 68.0,
+   "thalach": 115.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 67.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 69.0,
+   "thalach": 131.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 152.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 50.0,
+   "thalach": 162.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 59.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 159.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 64.0,
+   "thalach": 154.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 57.0,
+   "thalach": 173.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 133.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 161.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 147.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 126.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 155.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 154.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 37.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 38.0,
+   "thalach": 182.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 168.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 165.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 52.0,
+   "thalach": 160.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 162.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 46.0,
+   "thalach": 152.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 64.0,
+   "thalach": 122.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 59.0,
+   "thalach": 182.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 167.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 39.0,
+   "thalach": 179.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 53.0,
+   "thalach": 95.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 169.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 34.0,
+   "thalach": 192.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 47.0,
+   "thalach": 143.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 67.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 108.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 132.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 169.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 55.0,
+   "thalach": 117.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 126.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 74.0,
+   "thalach": 121.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 163.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 116.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 103.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 144.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 162.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 42.0,
+   "thalach": 162.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 153.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 163.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 163.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 61.0,
+   "thalach": 145.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 96.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 67.0,
+   "thalach": 71.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 156.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 118.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 168.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 126.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 105.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 157.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 181.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 173.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 67.0,
+   "thalach": 142.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 76.0,
+   "thalach": 116.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 70.0,
+   "thalach": 143.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 141.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 149.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 58.0,
+   "thalach": 152.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 60.0,
+   "thalach": 171.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 44.0,
+   "thalach": 169.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 156.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 134.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 181.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 138.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 138.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 71.0,
+   "thalach": 125.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 59.0,
+   "thalach": 162.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 155.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 152.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 39.0,
+   "thalach": 152.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 57.0,
+   "thalach": 164.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 131.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 57.0,
+   "thalach": 143.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 179.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 35.0,
+   "thalach": 174.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 161.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 146.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 58.0,
+   "thalach": 144.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 163.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 169.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 67.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 166.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 44.0,
+   "thalach": 144.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 144.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 136.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 41.0,
+   "thalach": 182.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 90.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 123.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 45.0,
+   "thalach": 132.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 68.0,
+   "thalach": 141.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 174.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 38.0,
+   "thalach": 173.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 28.0,
+   "thalach": 185.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 29.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 29.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 30.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 31.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 32.0,
+   "thalach": 165.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 32.0,
+   "thalach": 184.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 32.0,
+   "thalach": 155.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 33.0,
+   "thalach": 185.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 34.0,
+   "thalach": 190.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 34.0,
+   "thalach": 168.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 34.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 35.0,
+   "thalach": 185.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 35.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 35.0,
+   "thalach": 180.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 35.0,
+   "thalach": 168.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 36.0,
+   "thalach": 180.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 36.0,
+   "thalach": 184.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 36.0,
+   "thalach": 178.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 36.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 37.0,
+   "thalach": 130.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 37.0,
+   "thalach": 142.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 37.0,
+   "thalach": 184.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 37.0,
+   "thalach": 98.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 37.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 37.0,
+   "thalach": 168.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 37.0,
+   "thalach": 158.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 129.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 38.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 130.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 180.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 39.0,
+   "thalach": 146.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 145.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 106.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 132.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 138.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 167.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 188.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 142.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 41.0,
+   "thalach": 180.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 41.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 41.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 144.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 142.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 137.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 42.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 155.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 136.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 152.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 146.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 142.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 165.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 175.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 176.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 118.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 154.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 175.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 138.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 115.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 44.0,
+   "thalach": 142.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 135.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 45.0,
+   "thalach": 180.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 45.0,
+   "thalach": 144.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 45.0,
+   "thalach": 122.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 110.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 144.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 90.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 46.0,
+   "thalach": 165.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 116.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 135.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 47.0,
+   "thalach": 145.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 47.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 174.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 125.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 148.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 125.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 175.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 110.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 130.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 100.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 118.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 138.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 164.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 135.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 174.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 172.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 132.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 130.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 145.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 50.0,
+   "thalach": 110.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 50.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 116.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 135.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 51.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 51.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 51.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 51.0,
+   "thalach": 145.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 100.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 148.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 52.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 52.0,
+   "thalach": 139.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 52.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 52.0,
+   "thalach": 118.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 138.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 165.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 170.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 127.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 53.0,
+   "thalach": 142.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 53.0,
+   "thalach": 130.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 53.0,
+   "thalach": 132.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 162.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 112.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 148.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 155.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 138.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 155.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 130.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 130.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 54.0,
+   "thalach": 137.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 142.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 154.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 110.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 130.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 175.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 137.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 122.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 134.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 55.0,
+   "thalach": 155.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 55.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 55.0,
+   "thalach": 137.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 155.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 134.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 110.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 164.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 56.0,
+   "thalach": 100.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 114.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 128.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 98.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 57.0,
+   "thalach": 126.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 57.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 110.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 100.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 124.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 59.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 100.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 135.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 61.0,
+   "thalach": 115.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 116.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 62.0,
+   "thalach": 152.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 31.0,
+   "thalach": 153.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 33.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 34.0,
+   "thalach": 180.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 35.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 36.0,
+   "thalach": 160.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 37.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 166.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 170.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 134.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 152.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 170.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 138.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 124.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 145.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 98.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 103.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 156.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 175.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 170.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 50.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 52.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 145.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 60.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 87.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 32.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 39.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 43.0,
+   "thalach": 155.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 112.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 102.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 92.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 99.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 121.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 126.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 116.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 91.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 118.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 142.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 128.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 92.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 92.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 100.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 175.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 170.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 108.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 49.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 96.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 124.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 82.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 136.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 143.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 96.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 56.0,
+   "thalach": 124.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 99.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 119.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 112.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 94.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 118.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 135.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 135.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 98.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 47.0,
+   "thalach": 158.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 96.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 134.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 94.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 100.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 56.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 65.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 32.0,
+   "thalach": 127.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 34.0,
+   "thalach": 154.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 35.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 36.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 166.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 38.0,
+   "thalach": 156.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 38.0,
+   "thalach": 179.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 128.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 144.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 176.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 128.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 99.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 145.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 45.0,
+   "thalach": 138.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 133.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 113.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 118.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 149.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 47.0,
+   "thalach": 124.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 128.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 50.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 156.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 139.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 127.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 51.0,
+   "thalach": 92.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 104.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 170.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 163.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 60.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 126.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 128.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 82.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 95.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 135.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 141.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 155.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 155.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 92.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 83.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 97.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 98.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 99.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 82.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 100.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 148.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 103.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 121.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 148.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 131.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 100.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 98.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 182.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 138.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 100.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 175.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 94.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 119.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 143.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 63.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 99.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 149.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 70.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 113.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 77.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 117.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 145.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 143.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 62.0,
+   "thalach": 123.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 62.0,
+   "thalach": 134.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 72.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 128.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 72.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 78.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 109.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 149.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 86.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 154.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 98.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 64.0,
+   "thalach": 145.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 64.0,
+   "thalach": 114.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 93.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 67.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 154.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 90.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 66.0,
+   "thalach": 108.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 67.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 68.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 68.0,
+   "thalach": 136.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 69.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 70.0,
+   "thalach": 92.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 70.0,
+   "thalach": 157.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 72.0,
+   "thalach": 114.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 73.0,
+   "thalach": 121.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 74.0,
+   "thalach": 123.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 112.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 44.0,
+   "thalach": 127.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 149.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 99.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 141.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 157.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 140.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 117.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 148.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 86.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 84.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 118.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 124.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 106.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 111.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 180.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 69.0,
+   "thalach": 129.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 77.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 155.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 52.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 133.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 131.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 80.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 165.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 86.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 111.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 84.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 117.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 107.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 128.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 42.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 97.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 161.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 106.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 68.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 108.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 148.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 123.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 69.0,
+   "thalach": 118.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 67.0,
+   "thalach": 125.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 106.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 180.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 144.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 72.0,
+   "thalach": 102.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 75.0,
+   "thalach": 108.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 49.0,
+   "thalach": 145.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 58.0,
+   "thalach": 69.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 148.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 67.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 138.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 69.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 112.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 75.0,
+   "thalach": 112.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 40.0,
+   "thalach": 80.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 67.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 88.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 43.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 68.0,
+   "thalach": 132.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 65.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 121.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 128.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 135.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 50.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 117.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 150.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 102.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 63.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 135.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 74.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 112.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 100.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 76.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 70.0,
+   "thalach": 129.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 120.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 48.0,
+   "thalach": 162.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 100.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 66.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 73.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 86.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 160.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 118.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 75.0,
+   "thalach": 112.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 102.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 59.0,
+   "thalach": 154.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 160.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 41.0,
+   "thalach": 128.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 71.0,
+   "thalach": 115.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 38.0,
+   "thalach": 105.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 110.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 119.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 135.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 72.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 119.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 48.0,
+   "thalach": 159.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 69.0,
+   "thalach": 84.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 120.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 37.0,
+   "thalach": 165.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 67.0,
+   "thalach": 122.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 74.0,
+   "thalach": 94.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 110.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 150.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 64.0,
+   "thalach": 130.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 113.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 60.0,
+   "thalach": 140.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 100.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 55.0,
+   "thalach": 127.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 56.0,
+   "thalach": 98.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 57.0,
+   "thalach": 96.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 61.0,
+   "thalach": 98.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 58.0,
+   "thalach": 118.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 74.0,
+   "thalach": 112.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 68.0,
+   "thalach": 151.0,
+   "disease": 0,
+   "sex_l": "Male"
+  },
+  {
+   "age": 51.0,
+   "thalach": 96.0,
+   "disease": 0,
+   "sex_l": "Female"
+  },
+  {
+   "age": 62.0,
+   "thalach": 108.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 53.0,
+   "thalach": 128.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 138.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 46.0,
+   "thalach": 126.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 54.0,
+   "thalach": 154.0,
+   "disease": 1,
+   "sex_l": "Female"
+  },
+  {
+   "age": 55.0,
+   "thalach": 100.0,
+   "disease": 1,
+   "sex_l": "Male"
+  },
+  {
+   "age": 62.0,
+   "thalach": 93.0,
+   "disease": 1,
+   "sex_l": "Male"
+  }
+ ],
+ "kpi": {
+  "patients": 920,
+  "prevalence": 55.3,
+  "avg_age": 53.5,
+  "male_pct": 78.9,
+  "avg_chol": 247,
+  "avg_hr": 138
+ }
+}
