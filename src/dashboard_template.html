@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heart Disease Risk Analytics Dashboard</title>
+<style>
+:root{--navy:#0f172a;--navy2:#1e293b;--bg:#f1f5f9;--card:#fff;--ink:#0f172a;--mute:#64748b;--line:#e2e8f0;
+--red:#ef4444;--teal:#14b8a6;--violet:#7c3aed;--blue:#3b82f6;--amber:#f59e0b;--pink:#ec4899}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;background:var(--bg);color:var(--ink);display:flex;min-height:100vh}
+aside{width:232px;background:linear-gradient(180deg,#0f172a,#1e1b4b);color:#cbd5e1;padding:24px 18px;position:sticky;top:0;height:100vh;flex-shrink:0;display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:17px;margin-bottom:28px}
+.brand i{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#ef4444,#7c3aed);display:grid;place-items:center;font-style:normal;font-size:18px}
+aside h6{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#64748b;margin:18px 6px 8px}
+.nav a{display:flex;gap:10px;align-items:center;padding:9px 12px;border-radius:10px;font-size:13.5px;color:#cbd5e1;text-decoration:none;margin-bottom:3px}
+.nav a.on{background:rgba(255,255,255,.1);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid #334155;background:transparent;color:#cbd5e1;border-radius:20px;padding:5px 11px;font-size:12px;cursor:pointer;font-family:inherit}
+.chip.on{background:linear-gradient(135deg,#7c3aed,#ef4444);border-color:transparent;color:#fff}
+.side-foot{margin-top:auto;font-size:11px;color:#64748b;line-height:1.5}
+main{flex:1;padding:22px 26px 30px;min-width:0}
+header{background:linear-gradient(110deg,#7c3aed 0%,#ec4899 55%,#ef4444 100%);border-radius:20px;padding:24px 28px;color:#fff;display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;box-shadow:0 10px 30px rgba(124,58,237,.25)}
+header h1{font-size:25px;font-weight:800;letter-spacing:-.02em}
+header p{opacity:.9;font-size:13.5px;margin-top:5px}
+.badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:10px 16px;font-size:12px;text-align:right}
+.badge b{display:block;font-size:20px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:16px}
+.card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 1px 3px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.04)}
+.kpi{display:flex;gap:12px;align-items:center}
+.ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:21px;flex-shrink:0}
+.kpi small{color:var(--mute);font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.kpi b{display:block;font-size:24px;letter-spacing:-.02em;margin-top:2px}
+.grid{display:grid;gap:16px;margin-bottom:16px}
+.g3{grid-template-columns:1fr 1.25fr 1fr}.g2{grid-template-columns:1.4fr 1fr}.g3b{grid-template-columns:1fr 1fr 1fr}
+.card h3{font-size:14.5px;font-weight:700;margin-bottom:2px}
+.card .sub{font-size:11.5px;color:var(--mute);margin-bottom:12px}
+.box{position:relative;height:250px}
+.ins{display:grid;gap:10px}
+.ins div{display:flex;gap:11px;padding:11px 13px;border-radius:13px;background:#f8fafc;border:1px solid var(--line);font-size:12.8px;line-height:1.45}
+.ins span{font-size:18px}
+.models{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.m{border-radius:14px;padding:13px;color:#fff}
+.m b{font-size:24px;display:block}.m small{opacity:.85;font-size:11.5px}
+.note{font-size:11.5px;color:var(--mute);line-height:1.55;margin-top:6px}
+footer{font-size:11.5px;color:var(--mute);text-align:center;margin-top:8px}
+@media(max-width:1100px){aside{display:none}.kpis{grid-template-columns:repeat(2,1fr)}.g3,.g2,.g3b{grid-template-columns:1fr}header{flex-direction:column;align-items:flex-start;gap:12px}}
+</style></head><body>
+<aside>
+ <div class="brand"><i>❤</i>CardioScope</div>
+ <div class="nav"><a class="on">📊 Overview</a><a>🧬 Risk factors</a><a>🤖 Prediction model</a><a>🗂 Data quality</a></div>
+ <h6>Filter · Hospital site</h6><div class="chips" id="fsite"></div>
+ <h6>Filter · Sex</h6><div class="chips" id="fsex"></div>
+ <div class="side-foot">Source: UCI Heart Disease (Detrano et al., 1989) · 4 hospitals · 920 patients<br><br>Built with Python · SQL · Chart.js</div>
+</aside>
+<main>
+<header><div><h1>Heart Disease Risk Analytics</h1><p>What separates patients with coronary artery disease from those without? Real clinical data, 4 hospitals, 920 patients.</p></div>
+<div class="badge">Showing<b id="shown">920</b>patients</div></header>
+<section class="kpis" id="kpis"></section>
+<section class="grid g3">
+ <div class="card"><h3>Diagnosis split</h3><div class="sub">Angiographic disease (&gt;50% narrowing)</div><div class="box"><canvas id="cDonut"></canvas></div></div>
+ <div class="card"><h3>Disease rate by age group &amp; sex</h3><div class="sub">% of patients with heart disease</div><div class="box"><canvas id="cAge"></canvas></div></div>
+ <div class="card"><h3>Disease severity</h3><div class="sub">0 = none … 4 = most severe</div><div class="box"><canvas id="cSev"></canvas></div></div>
+</section>
+<section class="grid g3b">
+ <div class="card"><h3>Chest pain type</h3><div class="sub">Disease rate by symptom (surprise: asymptomatic is highest)</div><div class="box"><canvas id="cCp"></canvas></div></div>
+ <div class="card"><h3>Max heart rate achieved</h3><div class="sub">Disease rate by exercise-test heart rate (bpm)</div><div class="box"><canvas id="cHr"></canvas></div></div>
+ <div class="card"><h3>Exercise-induced angina</h3><div class="sub">Disease rate: with vs without</div><div class="box"><canvas id="cEx"></canvas></div></div>
+</section>
+<section class="grid g2">
+ <div class="card"><h3>Age vs max heart rate</h3><div class="sub">Each dot is a patient · red = disease</div><div class="box" style="height:290px"><canvas id="cSc"></canvas></div></div>
+ <div class="card"><h3>Disease rate by hospital</h3><div class="sub">Big gaps = different patient referral populations</div><div class="box" style="height:290px"><canvas id="cSite"></canvas></div></div>
+</section>
+<section class="grid g2">
+ <div class="card"><h3>Predictive model · what drives risk</h3><div class="sub">Random Forest feature importance (10 clinical features)</div>
+  <div class="models"><div class="m" style="background:linear-gradient(135deg,#7c3aed,#3b82f6)"><small>Logistic Regression · test AUC</small><b>__LR_AUC__</b><small>accuracy __LR_ACC__</small></div>
+  <div class="m" style="background:linear-gradient(135deg,#14b8a6,#0ea5e9)"><small>Random Forest · test AUC</small><b>__RF_AUC__</b><small>accuracy __RF_ACC__</small></div></div>
+  <div class="box" style="height:240px"><canvas id="cImp"></canvas></div></div>
+ <div class="card"><h3>Key insights</h3><div class="sub">Computed on the full 920-patient dataset</div>
+  <div class="ins" id="ins"></div>
+  <p class="note"><b>Caveat:</b> hospitals differ a lot in who gets referred (Switzerland 93.5% positive vs Hungary 36%), and 172 cholesterol values were recorded as 0 and treated as missing. This is observational data: association, not causation, and not a diagnostic tool.</p></div>
+</section>
+<footer>Heart Disease Risk Analytics · Abderrahman Medhat · Data: UCI Machine Learning Repository</footer>
+</main>
+<script>__CHARTJS__</script>
+<script>
+const D=__DATA__; const IMP=__IMP__;
+const C={red:'#ef4444',teal:'#14b8a6',violet:'#7c3aed',blue:'#3b82f6',amber:'#f59e0b',pink:'#ec4899',grey:'#cbd5e1'};
+Chart.defaults.font.family='Inter,Segoe UI,system-ui,sans-serif';Chart.defaults.font.size=11.5;Chart.defaults.color='#64748b';
+Chart.defaults.maintainAspectRatio=false;Chart.defaults.plugins.legend.labels.usePointStyle=true;Chart.defaults.plugins.legend.labels.boxWidth=8;
+const SITES=['All',...[...new Set(D.map(d=>d.site))]], SEX=['All','Male','Female'];
+let fs='All',fx='All';
+const mk=(id,arr,get,set)=>{const el=document.getElementById(id);arr.forEach(v=>{const b=document.createElement('button');b.className='chip'+(v==='All'?' on':'');b.textContent=v;b.onclick=()=>{set(v);el.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===b));render()};el.appendChild(b)})};
+mk('fsite',SITES,()=>fs,v=>fs=v);mk('fsex',SEX,()=>fx,v=>fx=v);
+const rate=a=>a.length?Math.round(a.filter(d=>d.dis).length/a.length*1000)/10:0;
+const avg=(a,k)=>{const v=a.map(d=>d[k]).filter(x=>x!=null);return v.length?v.reduce((s,x)=>s+x,0)/v.length:0};
+const ch={};
+function draw(id,cfg){if(ch[id]){ch[id].data=cfg.data;ch[id].update()}else ch[id]=new Chart(document.getElementById(id),cfg)}
+const pctAxis={beginAtZero:true,max:100,grid:{color:'#eef2f7'},ticks:{callback:v=>v+'%'}};
+const barOpt=(x)=>({responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y!=null?c.parsed.y+'%':c.parsed.x+'%'}}},scales:{x:{grid:{display:false}},y:pctAxis,...x}});
+function render(){
+ const S=D.filter(d=>(fs==='All'||d.site===fs)&&(fx==='All'||d.sexl===fx));
+ document.getElementById('shown').textContent=S.length;
+ const dis=S.filter(d=>d.dis).length, n=S.length||1;
+ const K=[['Patients',S.length,'🧑‍⚕️','#ede9fe'],['Disease rate',rate(S)+'%','❤️','#fee2e2'],['Avg age',avg(S,'age').toFixed(1),'🎂','#dbeafe'],
+  ['Male share',Math.round(S.filter(d=>d.sex).length/n*100)+'%','♂','#ccfbf1'],['Avg cholesterol',Math.round(avg(S,'chol'))||'–','🩸','#fef3c7'],['Avg max HR',Math.round(avg(S,'hr'))||'–','💓','#fce7f3']];
+ document.getElementById('kpis').innerHTML=K.map(k=>`<div class="card kpi"><div class="ico" style="background:${k[3]}">${k[2]}</div><div><small>${k[0]}</small><b>${k[1]}</b></div></div>`).join('');
+ draw('cDonut',{type:'doughnut',data:{labels:['Heart disease','No disease'],datasets:[{data:[dis,S.length-dis],backgroundColor:[C.red,C.teal],borderWidth:0,hoverOffset:6}]},options:{cutout:'68%',plugins:{legend:{position:'bottom'}}}});
+ const ag=['<40','40-49','50-59','60-69','70+'],ab=a=>a<40?'<40':a<50?'40-49':a<60?'50-59':a<70?'60-69':'70+';
+ const byA=(s)=>ag.map(g=>{const a=S.filter(d=>ab(d.age)===g&&d.sexl===s);return a.length>=8?rate(a):null});
+ draw('cAge',{type:'bar',data:{labels:ag,datasets:[{label:'Male',data:byA('Male'),backgroundColor:C.violet,borderRadius:6},{label:'Female',data:byA('Female'),backgroundColor:C.pink,borderRadius:6}]},options:{...barOpt(),plugins:{legend:{display:true,position:'bottom'}}}});
+ draw('cSev',{type:'bar',data:{labels:['0','1','2','3','4'],datasets:[{data:[0,1,2,3,4].map(v=>S.filter(d=>d.num===v).length),backgroundColor:['#14b8a6','#fbbf24','#fb923c','#ef4444','#991b1b'],borderRadius:8}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{grid:{color:'#eef2f7'}}}}});
+ const cpn=['Asymptomatic','Typical angina','Non-anginal pain','Atypical angina'];
+ draw('cCp',{type:'bar',data:{labels:cpn,datasets:[{data:cpn.map(c=>{const a=S.filter(d=>d.cpl===c);return a.length>=8?rate(a):null}),backgroundColor:[C.red,C.amber,C.blue,C.teal],borderRadius:8}]},options:{...barOpt(),indexAxis:'y',scales:{y:{grid:{display:false}},x:pctAxis}}});
+ const hb=h=>h<120?'< 120':h<150?'120-149':'150+';const hl=['< 120','120-149','150+'];
+ draw('cHr',{type:'line',data:{labels:hl,datasets:[{data:hl.map(l=>{const a=S.filter(d=>d.hr!=null&&hb(d.hr)===l);return a.length>=8?rate(a):null}),borderColor:C.red,backgroundColor:'rgba(239,68,68,.15)',fill:true,tension:.35,pointRadius:6,pointBackgroundColor:'#fff',pointBorderColor:C.red,pointBorderWidth:3}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:pctAxis}}});
+ draw('cEx',{type:'bar',data:{labels:['No exercise angina','Exercise angina'],datasets:[{data:[0,1].map(v=>{const a=S.filter(d=>d.ex===v);return a.length>=8?rate(a):null}),backgroundColor:[C.teal,C.red],borderRadius:10,barPercentage:.6}]},options:barOpt()});
+ draw('cSc',{type:'scatter',data:{datasets:[{label:'No disease',data:S.filter(d=>!d.dis&&d.hr!=null).map(d=>({x:d.age,y:d.hr})),backgroundColor:'rgba(20,184,166,.55)',pointRadius:4},{label:'Heart disease',data:S.filter(d=>d.dis&&d.hr!=null).map(d=>({x:d.age,y:d.hr})),backgroundColor:'rgba(239,68,68,.55)',pointRadius:4}]},options:{responsive:true,plugins:{legend:{position:'bottom'}},scales:{x:{title:{display:true,text:'Age'},grid:{color:'#eef2f7'},min:25},y:{title:{display:true,text:'Max heart rate (bpm)'},grid:{color:'#eef2f7'}}}}});
+ const sl=[...new Set(D.map(d=>d.site))];
+ draw('cSite',{type:'bar',data:{labels:sl,datasets:[{data:sl.map(s=>{const a=S.filter(d=>d.site===s);return a.length?rate(a):null}),backgroundColor:[C.violet,C.pink,C.blue,C.amber],borderRadius:8}]},options:{...barOpt(),indexAxis:'y',scales:{y:{grid:{display:false}},x:pctAxis}}});
+}
+draw=draw;
+// static charts
+new Chart(document.getElementById('cImp'),{type:'bar',data:{labels:IMP.map(i=>i.feature),datasets:[{data:IMP.map(i=>i.value),backgroundColor:IMP.map((_,i)=>i<3?C.violet:'#c4b5fd'),borderRadius:6}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#eef2f7'}},y:{grid:{display:false}}}}});
+document.getElementById('ins').innerHTML=[
+ ['👨','Men are far more affected: <b>63%</b> vs <b>26%</b> in women (odds ratio ≈ <b>5×</b>, p &lt; 0.001).'],
+ ['🫥','<b>79%</b> of asymptomatic patients had disease, versus 14% with atypical angina. No symptoms does not mean low risk.'],
+ ['🏃','Angina during exercise: <b>84%</b> disease rate vs 36% without it, the strongest single signal.'],
+ ['💓','Patients who reach 150+ bpm on the test: <b>29%</b> disease. Under 120 bpm: <b>76%</b>.'],
+ ['📈','Risk climbs with age: 33% under 40, <b>73%</b> in the 60s. Cholesterol 240+ adds only ~16 points vs desirable.']
+].map(x=>`<div><span>${x[0]}</span><p>${x[1]}</p></div>`).join('');
+render();
+</script></body></html>
