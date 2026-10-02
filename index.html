@@ -11,6 +11,8 @@ aside{width:232px;background:linear-gradient(180deg,#0f172a,#1e1b4b);color:#cbd5
 .brand i{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#ef4444,#7c3aed);display:grid;place-items:center;font-style:normal;font-size:18px}
 aside h6{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#64748b;margin:18px 6px 8px}
 .nav a{display:flex;gap:10px;align-items:center;padding:9px 12px;border-radius:10px;font-size:13.5px;color:#cbd5e1;text-decoration:none;margin-bottom:3px}
+.nav a{cursor:pointer;transition:background .15s}.nav a:hover{background:rgba(255,255,255,.07)}
+html{scroll-behavior:smooth}.sec{scroll-margin-top:16px}
 .nav a.on{background:rgba(255,255,255,.1);color:#fff}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{border:1px solid #334155;background:transparent;color:#cbd5e1;border-radius:20px;padding:5px 11px;font-size:12px;cursor:pointer;font-family:inherit}
@@ -45,13 +47,13 @@ footer{font-size:11.5px;color:var(--mute);text-align:center;margin-top:8px}
 </style></head><body>
 <aside>
  <div class="brand"><i>❤</i>CardioScope</div>
- <div class="nav"><a class="on">📊 Overview</a><a>🧬 Risk factors</a><a>🤖 Prediction model</a><a>🗂 Data quality</a></div>
+ <div class="nav" id="nav"><a href="#overview" class="on">📊&nbsp; Overview</a><a href="#risk">🧬&nbsp; Risk factors</a><a href="#model">🤖&nbsp; Prediction model</a><a href="#quality">🧹&nbsp; Data quality</a></div>
  <h6>Filter · Hospital site</h6><div class="chips" id="fsite"></div>
  <h6>Filter · Sex</h6><div class="chips" id="fsex"></div>
  <div class="side-foot">Source: UCI Heart Disease (Detrano et al., 1989) · 4 hospitals · 920 patients<br><br>Built with Python · SQL · Chart.js</div>
 </aside>
 <main>
-<header><div><h1>Heart Disease Risk Analytics</h1><p>What separates patients with coronary artery disease from those without? Real clinical data, 4 hospitals, 920 patients.</p></div>
+<header id="overview" class="sec"><div><h1>Heart Disease Risk Analytics</h1><p>What separates patients with coronary artery disease from those without? Real clinical data, 4 hospitals, 920 patients.</p></div>
 <div class="badge">Showing<b id="shown">920</b>patients</div></header>
 <section class="kpis" id="kpis"></section>
 <section class="grid g3">
@@ -59,7 +61,7 @@ footer{font-size:11.5px;color:var(--mute);text-align:center;margin-top:8px}
  <div class="card"><h3>Disease rate by age group &amp; sex</h3><div class="sub">% of patients with heart disease</div><div class="box"><canvas id="cAge"></canvas></div></div>
  <div class="card"><h3>Disease severity</h3><div class="sub">0 = none … 4 = most severe</div><div class="box"><canvas id="cSev"></canvas></div></div>
 </section>
-<section class="grid g3b">
+<section class="grid g3b sec" id="risk">
  <div class="card"><h3>Chest pain type</h3><div class="sub">Disease rate by symptom (surprise: asymptomatic is highest)</div><div class="box"><canvas id="cCp"></canvas></div></div>
  <div class="card"><h3>Max heart rate achieved</h3><div class="sub">Disease rate by exercise-test heart rate (bpm)</div><div class="box"><canvas id="cHr"></canvas></div></div>
  <div class="card"><h3>Exercise-induced angina</h3><div class="sub">Disease rate: with vs without</div><div class="box"><canvas id="cEx"></canvas></div></div>
@@ -68,7 +70,7 @@ footer{font-size:11.5px;color:var(--mute);text-align:center;margin-top:8px}
  <div class="card"><h3>Age vs max heart rate</h3><div class="sub">Each dot is a patient · red = disease</div><div class="box" style="height:290px"><canvas id="cSc"></canvas></div></div>
  <div class="card"><h3>Disease rate by hospital</h3><div class="sub">Big gaps = different patient referral populations</div><div class="box" style="height:290px"><canvas id="cSite"></canvas></div></div>
 </section>
-<section class="grid g2">
+<section class="grid g2 sec" id="model">
  <div class="card"><h3>Predictive model · what drives risk</h3><div class="sub">Random Forest feature importance (10 clinical features)</div>
   <div class="models"><div class="m" style="background:linear-gradient(135deg,#7c3aed,#3b82f6)"><small>Logistic Regression · test AUC</small><b>0.886</b><small>accuracy 80%</small></div>
   <div class="m" style="background:linear-gradient(135deg,#14b8a6,#0ea5e9)"><small>Random Forest · test AUC</small><b>0.902</b><small>accuracy 80%</small></div></div>
@@ -76,6 +78,17 @@ footer{font-size:11.5px;color:var(--mute);text-align:center;margin-top:8px}
  <div class="card"><h3>Key insights</h3><div class="sub">Computed on the full 920-patient dataset</div>
   <div class="ins" id="ins"></div>
   <p class="note"><b>Caveat:</b> hospitals differ a lot in who gets referred (Switzerland 93.5% positive vs Hungary 36%), and 172 cholesterol values were recorded as 0 and treated as missing. This is observational data: association, not causation, and not a diagnostic tool.</p></div>
+</section>
+<section class="grid g2 sec" id="quality">
+ <div class="card"><h3>Data quality · missing values</h3><div class="sub">% of the 920 records missing, after cleaning (impossible zeros counted as missing)</div><div class="box" style="height:300px"><canvas id="cQual"></canvas></div></div>
+ <div class="card"><h3>What was cleaned</h3><div class="sub">Steps applied before analysis</div>
+  <div class="ins">
+   <div><span>🔗</span><p>Merged <b>4 hospital files</b> (Cleveland, Hungary, Switzerland, VA) into one table of 920 patients.</p></div>
+   <div><span>0️⃣</span><p><b>172 cholesterol</b> and 1 blood-pressure values were recorded as 0, which is impossible, so they were set to missing.</p></div>
+   <div><span>🧩</span><p><b>Slope, vessels (ca) and thal</b> are 34-66% missing, so they were left out of the model rather than guessed.</p></div>
+   <div><span>🩹</span><p>Remaining gaps were filled with the <b>median</b> inside the model pipeline only. Charts use real values.</p></div>
+   <div><span>👯</span><p>2 exact duplicate rows were kept, since identical readings can occur in different patients.</p></div>
+  </div></div>
 </section>
 <footer>Heart Disease Risk Analytics · Abderrahman Medhat · Data: UCI Machine Learning Repository</footer>
 </main>
@@ -140,5 +153,12 @@ document.getElementById('ins').innerHTML=[
  ['💓','Patients who reach 150+ bpm on the test: <b>29%</b> disease. Under 120 bpm: <b>76%</b>.'],
  ['📈','Risk climbs with age: 33% under 40, <b>73%</b> in the 60s. Cholesterol 240+ adds only ~16 points vs desirable.']
 ].map(x=>`<div><span>${x[0]}</span><p>${x[1]}</p></div>`).join('');
+const QUAL=[{"f": "Major vessels (ca)", "v": 66.4}, {"f": "Thalassemia (thal)", "v": 52.8}, {"f": "ST slope", "v": 33.6}, {"f": "Cholesterol", "v": 22.0}, {"f": "Fasting sugar", "v": 9.8}, {"f": "ST depression", "v": 6.7}, {"f": "Resting BP", "v": 6.5}, {"f": "Max heart rate", "v": 6.0}, {"f": "Exercise angina", "v": 6.0}, {"f": "Rest ECG", "v": 0.2}];
+new Chart(document.getElementById('cQual'),{type:'bar',data:{labels:QUAL.map(i=>i.f),datasets:[{data:QUAL.map(i=>i.v),backgroundColor:QUAL.map(i=>i.v>30?'#ef4444':i.v>10?'#f59e0b':'#14b8a6'),borderRadius:6}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+'% missing'}}},scales:{x:{max:100,grid:{color:'#eef2f7'},ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}});
+// nav: highlight on scroll
+const links=[...document.querySelectorAll('#nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+let lock=0;function act(){if(Date.now()<lock)return;let y=window.scrollY+120,cur=0;secs.forEach((s,i)=>{if(s.offsetTop<=y)cur=i});if(window.innerHeight+window.scrollY>=document.body.scrollHeight-4)cur=secs.length-1;links.forEach((a,i)=>a.classList.toggle('on',i===cur))}
+window.addEventListener('scroll',act);links.forEach(a=>a.addEventListener('click',()=>{links.forEach(x=>x.classList.toggle('on',x===a));lock=Date.now()+1000}));act();
 render();
 </script></body></html>
