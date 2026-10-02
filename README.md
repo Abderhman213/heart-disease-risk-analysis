@@ -4,9 +4,17 @@ End-to-end data analysis project on **real clinical data**: what separates patie
 
 **Live dashboard:** https://abderhman213.github.io/heart-disease-risk-analysis/
 
-![Dashboard](images/dashboard.png)
+[![Dashboard overview](images/dashboard-screen-1-overview.png)](https://abderhman213.github.io/heart-disease-risk-analysis/)
+
+| Risk factors | Model and data quality |
+|---|---|
+| ![Risk factors](images/dashboard-screen-2-risk-factors.png) | ![Model and data quality](images/dashboard-screen-3-model-and-quality.png) |
+
+Full-page view: [images/dashboard.png](images/dashboard.png)
 
 ## Data
+The cleaned dataset behind the dashboard is available as Excel: [data/Heart_Disease_Data.xlsx](data/Heart_Disease_Data.xlsx) (clean data, raw combined data, field guide), plus CSV and SQLite versions in `data/`.
+
 UCI Heart Disease dataset (Detrano et al., 1989): 920 patients from four hospitals (Cleveland, Hungary, Switzerland, VA Long Beach), 13 clinical attributes. Target: angiographic disease (>50% vessel narrowing). Source: https://archive.ics.uci.edu/dataset/45/heart+disease
 
 ## Workflow
@@ -14,7 +22,8 @@ UCI Heart Disease dataset (Detrano et al., 1989): 920 patients from four hospita
 2. **SQL (SQLite):** 11 queries in `src/queries.sql` (prevalence by site, sex, age, chest pain, exercise angina, cholesterol, blood pressure, heart rate, sex x age).
 3. **Statistics:** Mann-Whitney U for numeric variables, chi-square for categorical, odds ratio for sex.
 4. **Modeling:** logistic regression and random forest, 5-fold CV plus held-out test set, median imputation.
-5. **Dashboard:** interactive HTML (Chart.js, filters by hospital and sex). A Power BI rebuild guide is in `docs/POWERBI_GUIDE.md`.
+5. **Excel export:** `src/03_build_excel.py` writes the exact dataset used by the dashboard to Excel.
+6. **Dashboard:** interactive HTML (Chart.js, filters by hospital and sex). A Power BI rebuild guide is in `docs/POWERBI_GUIDE.md`.
 
 ## Key findings
 - 55.3% of patients had heart disease. Men: 63.2%, women: 25.8% (odds ratio about 4.95).
