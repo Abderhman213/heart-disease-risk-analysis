@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+raw/
+package/
+*.tgz
+hd.zip
+outputs/
